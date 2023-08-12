@@ -1,0 +1,47 @@
+package com.tap;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/asana")
+public class asanaproject extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+   
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("id");
+		String name = request.getParameter("name");
+		String assign = request.getParameter("assign");
+		String due = request.getParameter("due");
+		String dis = request.getParameter("dis");
+		
+		
+		
+		
+		PrintWriter out = response.getWriter();
+		out.println(id);
+		out.println(name);
+		out.println(assign);
+		out.println(due);
+		out.println(dis);
+		
+		asanadata asa = new asanadata();
+		asa.setTaskid(id);
+		asa.setName(name);
+		asa.setAssigne(assign);
+		asa.setDate(due);
+		asa.setDescription(dis);
+		
+		asanadb.serviceDb(asa);
+
+	
+	}
+
+}
