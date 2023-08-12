@@ -1,0 +1,73 @@
+package com.tap;
+
+public class asanadata {
+		private String  taskid;
+		private String name;
+		private String assigne;
+		private String date;
+		private String description;
+		
+		
+		public asanadata() {
+		}
+		
+		
+		public asanadata(String taskid, String name, String assigne, String date, String description) {
+			super();
+			this.taskid = taskid;
+			this.name = name;
+			this.assigne = assigne;
+			this.date = date;
+			this.description = description;
+		}
+
+		public String getTaskid() {
+			return taskid;
+		}
+
+		public void setTaskid(String taskid) {
+			this.taskid = taskid;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getAssigne() {
+			return assigne;
+		}
+
+		public void setAssigne(String assigne) {
+			this.assigne = assigne;
+		}
+
+		public String getDate() {
+			return date;
+		}
+
+		public void setDate(String date) {
+			this.date = date;
+		}
+
+		public String getDescription() {
+			return description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+
+		@Override
+		public String toString() {
+			return "asanadata [taskid=" + taskid + ", name=" + name + ", assigne=" + assigne + ", date=" + date
+					+ ", description=" + description + "]";
+		}
+
+	
+
+}
